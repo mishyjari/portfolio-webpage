@@ -1,8 +1,19 @@
 import React from 'react';
+import { Row, Container } from 'react-bootstrap'
 
-const ProjectShow = () => {
+const ProjectShow = props => {
+
+  const { project } = props;
+
   return (
-    <h1>ProjectShow Component</h1>
+    <Container>
+      <Row>
+        <h2 id='project-title'>{project ? project.title : null}</h2>
+      </Row>
+      <Row>
+        <p>{project ? project.description : null}</p>
+      </Row>
+    </Container>
   )
 }
 
