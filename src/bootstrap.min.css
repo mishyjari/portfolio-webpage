@@ -4356,7 +4356,11 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: -10px;
   padding: 0.5rem 1rem;
+  border-radius: .5rem;
+  box-shadow: inset 1px 2px 2px #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .navbar .container,

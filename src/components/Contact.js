@@ -1,8 +1,9 @@
 import React from 'react';
+import EmailForm from './EmailForm.js';
 
 const Contact = () => {
   return (
-    <h1>Contact Component</h1>
+    <EmailForm />
   )
 }
 
