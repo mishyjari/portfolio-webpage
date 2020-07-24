@@ -5,14 +5,15 @@ import ProjectShow from './ProjectShow.js';
 
 const ProjectPreview = props => {
 
-  const { title, description, id } = props.project;
+  const { title, shortDescription, id, imgUrl } = props.project;
 
   return (
     <Card>
       <Card.Header as={'h5'}>{title}</Card.Header>
+      <Card.Img src={imgUrl} style={{maxWidth: '90%'}}/>
       <Card.Body>
         <Card.Title as={Link} to={`/portfolio/${id}`}>Details</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Text>{shortDescription}</Card.Text>
       </Card.Body>
     </Card>
   )
