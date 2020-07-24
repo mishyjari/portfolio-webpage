@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
 import { Container, Col, Row, Nav, Navbar, Link} from 'react-bootstrap';
 import Home from './components/Home.js';
 import Contact from './components/Contact.js';
@@ -13,41 +13,65 @@ function App() {
     <Container className="App">
       <Router>
 
-      <Navbar sticky='top' bg='dark' variant='dark' expand='lg'>
+      <Navbar sticky='top' bg='dark' expand='lg'>
 
-        <Navbar.Brand style={{fontFamily: 'courier'}}>
+        <h1 style={{
+            fontFamily: 'courier',
+            color: '#fff',
+            fontSize: '2rem'
+          }}>
           mishyJari || Michelle Frattaroli
-        </Navbar.Brand>
+        </h1>
 
         <Nav className='mr-auto'>
 
         </Nav>
-        <Nav style={{color: '#fff'}}>
-          <Nav.Link>
-            <NavLink to='/' >
-              Home
-            </NavLink>
-          </Nav.Link>
-          <Nav.Link href='#projects'>
-            <NavLink to='/portfolio'>
-              Portfolio
-            </NavLink>
-          </Nav.Link>
-          <Nav.Link href='#contact'>
-            <NavLink to='/contact'>
-              Contact
-            </NavLink>
-          </Nav.Link>
+        <Nav>
+          <ul className='nav nav-tabs' role='tablist'>
+            <li className='nav-item'>
+              <NavLink
+                to='/about'
+                className='nav-link'
+                data-toggle='tab'
+                role='tab'
+                aria-controls='home'
+                selected={true}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                to='/portfolio'
+                className='nav-link'
+                data-toggle='tab'
+                role='tab'
+                aria-controls='portfolio'
+                selected={false}
+              >
+                Portfolio
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                to='/contact'
+                className='nav-link'
+                data-toggle='tab'
+                role='tab'
+                aria-controls='contact'
+                selected={false}
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
         </Nav>
 
       </Navbar>
 
-
-
-
-
         <Row id='content-main'>
-          <Route exact path='/' component={Home} />
+          <Redirect from='/' to='/about' />
+          <Route exact path='/about' component={Home} />
           <Route path='/portfolio' component={Portfolio} />
           <Route exact path='/contact' component={Contact} />
         </Row>
