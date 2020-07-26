@@ -78,12 +78,6 @@ function App() {
           <Route path='/portfolio' component={Portfolio} />
           <Route exact path='/contact' component={Contact} />
         </Row>
-        <Row id='footer' className='text-left'>
-          <ul>
-            <li><a href='https://www.linkedin.com/in/michelle-frattaroli-2502231a2/'>Linked In</a></li>
-            <li><a href='https://www.github.com/mishyjari'>GitHub</a></li>
-          </ul>
-        </Row>
       </Router>
     </Container>
   );

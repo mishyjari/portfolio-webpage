@@ -35,7 +35,15 @@ class EmailForm extends React.Component {
 
   render() {
     return (
-      <Form className='mailer' onChange={this.handleChange}>
+      <Form
+        className='mailer'
+        onChange={this.handleChange}
+        style={{
+          background: "#eee",
+          borderRadius: '2rem',
+          padding: '20px'
+        }}
+        >
 
         <Form.Group>
           <Form.Label>Name: </Form.Label>

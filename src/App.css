@@ -18,3 +18,8 @@
   box-shadow: inset 2px 4px 4px #aaa;
   font-weight: bold;
 }
+
+.media-img-sm {
+  width: 50px;
+  margin: 10px
+}
