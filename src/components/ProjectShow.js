@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Container, Nav, Button } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const ProjectShow = props => {
 
@@ -13,6 +13,15 @@ const ProjectShow = props => {
         borderRadius: '2rem',
         padding: '20px'
       }}>
+        <Row>
+          <NavLink to='/portfolio' className='text-left' style={{
+              marginBottom: '-20px',
+              fontSize: '1.2rem',
+              paddingLeft: '10px'
+            }}>
+            Back
+          </NavLink>
+        </Row>
 
         <h2 id='project-title'>{project ? project.title : null}</h2>
 
