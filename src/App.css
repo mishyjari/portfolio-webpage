@@ -9,3 +9,12 @@
 #content-main {
   padding: 20px;
 }
+
+.card-link {
+  color: #000;
+}
+
+.card-link:hover {
+  box-shadow: inset 2px 4px 4px #aaa;
+  font-weight: bold;
+}

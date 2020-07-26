@@ -63,7 +63,7 @@ body {
   background-color: #ccc;
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 2000px) {
     .container{
         font-size: 1.3em;
     }
@@ -4356,7 +4356,6 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: -10px;
   padding: 0.5rem 1rem;
   border-radius: .5rem;
   box-shadow: inset 1px 2px 2px #fff;
@@ -4452,6 +4451,12 @@ input[type="button"].btn-block {
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-main {
+    margin-bottom: -15px
   }
 }
 
@@ -4892,7 +4897,7 @@ input[type="button"].btn-block {
   margin-bottom: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1000px) {
   .card-deck {
     display: -ms-flexbox;
     display: flex;

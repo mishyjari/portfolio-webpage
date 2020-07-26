@@ -30,7 +30,7 @@ class EmailForm extends React.Component {
           content: ''
         }, () => alert('Email Sent!'))
       })
-      .catch(err => alert(err))
+      .catch(err => alert(JSON.stringify(err)))
   }
 
   render() {

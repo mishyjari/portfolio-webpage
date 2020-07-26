@@ -13,6 +13,10 @@ The following projects were built as part of Flatiron's SWE curriculum
 - ArrowJournal: A digital journal based loosely on the Bullet Journal designed to track events and tasks
 - Schmeddit: A Reddit clone featuring categories, up/down votes on posts, and threaded replies
 #To Do
-- Build router
-- Build layout
-- Populate with temp content pending API
+- Write project details
+- Record project demos
+- Make cards on project page more responsive (minWidth)
+- Build out + style contacts page
+- Home page style - something more interesting? Logos for frameworks?
+- Footer
+- Clean styles in header

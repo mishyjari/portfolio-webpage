@@ -1,16 +1,22 @@
 import React from 'react';
-import { Row, Col, Container, Nav } from 'react-bootstrap'
+import { Row, Col, Container, Nav, Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const ProjectShow = props => {
 
   const { project } = props;
 
   return (
-    <Container>
+    <Container style={{
+        border: '1px solid #aaa',
+        background: "#eee",
+        borderRadius: '2rem',
+        padding: '20px'
+      }}>
 
         <h2 id='project-title'>{project ? project.title : null}</h2>
 
-        <strong>{project ? project.shortDescription : null}</strong>
+        <h6><strong>{project ? project.shortDescription : null}</strong></h6>
 
         <Row as={Nav} className='justify-content-center'>
           <Nav.Item>
@@ -35,7 +41,13 @@ const ProjectShow = props => {
             <img src={project ? project.imgUrl : null} style={{maxWidth: '90%'}} />
           </Col>
           <Col>
-            <p>{project ? project.longDescription : null}</p>
+            <p style={{
+                fontSize: '1.2rem',
+                border: '1px solid #aaa',
+                borderRadius: '2rem',
+                padding: '20px',
+                background: "#ddd"
+              }}>{project ? project.longDescription : null}</p>
           </Col>
         </Row>
 

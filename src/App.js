@@ -16,6 +16,7 @@ function App() {
       <Navbar sticky='top' bg='dark' expand='lg'>
 
         <h1 style={{
+            paddingTop: '10px',
             fontFamily: 'courier',
             color: '#fff',
             fontSize: '2rem'
@@ -26,7 +27,7 @@ function App() {
         <Nav className='mr-auto'>
 
         </Nav>
-        <Nav>
+        <Nav className='nav-main'>
           <ul className='nav nav-tabs' role='tablist'>
             <li className='nav-item'>
               <NavLink
@@ -70,7 +71,9 @@ function App() {
       </Navbar>
 
         <Row id='content-main'>
-          <Redirect from='/' to='/about' />
+          <Route exact path='/'>
+            <Redirect from='/' to='/about' />
+          </Route>
           <Route exact path='/about' component={Home} />
           <Route path='/portfolio' component={Portfolio} />
           <Route exact path='/contact' component={Contact} />
