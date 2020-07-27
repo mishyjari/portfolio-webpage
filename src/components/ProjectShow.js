@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Container, Nav, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import renderHTML from 'react-render-html';
 
 const ProjectShow = props => {
 
@@ -50,13 +51,16 @@ const ProjectShow = props => {
             <img src={project ? project.imgUrl : null} style={{maxWidth: '90%'}} />
           </Col>
           <Col>
-            <p style={{
-                fontSize: '1.2rem',
+            <div
+              id='long-description'
+              className='text-left'
+              style={{
+                fontSize: '1rem',
                 border: '1px solid #aaa',
                 borderRadius: '2rem',
                 padding: '20px',
                 background: "#ddd"
-              }}>{project ? project.longDescription : null}</p>
+              }}>{project ? renderHTML(project.longDescription) : null}</div>
           </Col>
         </Row>
 
