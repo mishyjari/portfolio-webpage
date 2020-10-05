@@ -4,6 +4,7 @@ import { Container, Col, Row, Nav, Navbar, Link} from 'react-bootstrap';
 import Home from './components/Home.js';
 import Contact from './components/Contact.js';
 import Portfolio from './components/Portfolio.js';
+import About from './components/About.js';
 import './bootstrap.min.css';
 import './App.css';
 
@@ -19,7 +20,7 @@ function App() {
             paddingTop: '10px',
             fontFamily: 'courier',
             color: '#fff',
-            fontSize: '2rem'
+            fontSize: '1.2rem'
           }}>
           mishyJari || Michelle Frattaroli
         </h1>
@@ -31,12 +32,12 @@ function App() {
           <ul className='nav nav-tabs' role='tablist'>
             <li className='nav-item'>
               <NavLink
-                to='/about'
+                to='/'
                 className='nav-link'
                 data-toggle='tab'
                 role='tab'
                 aria-controls='home'
-                selected={true}
+                selected={false}
               >
                 Home
               </NavLink>
@@ -51,6 +52,18 @@ function App() {
                 selected={false}
               >
                 Portfolio
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                to='/about'
+                className='nav-link'
+                data-toggle='tab'
+                role='tab'
+                aria-controls='about'
+                selected={false}
+              >
+                About
               </NavLink>
             </li>
             <li className='nav-item'>
@@ -71,12 +84,10 @@ function App() {
       </Navbar>
 
         <Row id='content-main'>
-          <Route exact path='/'>
-            <Redirect from='/' to='/about' />
-          </Route>
-          <Route exact path='/about' component={Home} />
+          <Route exact path='/' component={Home} />
           <Route path='/portfolio' component={Portfolio} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/about' component={About} />
         </Row>
       </Router>
     </Container>
