@@ -16,7 +16,7 @@ const projects = [
             </p>
           <h4>Use Case</h4>
             <p>
-              The Board is built with the boutique courier service in mind, rather than larger app-based companies. These companies may only run a few dozen couriers at most, but their clients expect a much more hands-on personal experience as a result. A dispatcher will take orders as a delivery request from a client, create a ticket for that delivery, then dispatch it to a courier to complete the order. Once the order is delivered, the courier will report back to the dispatcher with the point-of-delivery, or “POD,” and the time it was delivered at. The dispatcher will then mark the ticket “complete” with this information.
+              The Board is built with the boutique courier service in mind, rather than larger app-based companies. These companies may only run a few dozen couriers at most, but their clients expect a much more hands-on, personal experience as a result. A dispatcher will take orders as a delivery request from a client, create a ticket for that delivery, then dispatch it to a courier to complete the order. Once the order is delivered, the courier will report back to the dispatcher with the point-of-delivery, or “POD,” and the time it was delivered at. The dispatcher will then mark the ticket “complete” with this information.
             </p>
             <p>
               The Board also features the ability to generate invoices for a given client and date range, which will list every ticket in that date range, allow for adjustments, and for it to be mark ‘paid’ once the client has paid.

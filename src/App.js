@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
-import { Container, Card, Row, Nav, Navbar, Image} from 'react-bootstrap';
+import { Container, Card, Row, Nav, Col, Navbar, Image} from 'react-bootstrap';
 import Home from './components/Home.js';
 import Contact from './components/Contact.js';
 import Portfolio from './components/Portfolio.js';
@@ -14,56 +14,59 @@ import './App.css';
 function App() {
 
   return (
-    <Container className="App">
+    <Container className="App justify">
       <Router>
 
-      <Navbar sticky='top' bg='light' expand='lg'>
+      <Navbar bg='light' expand='lg' className='justify-content-center'>
 
-        <h1 style={{
-            paddingTop: '10px',
-            fontFamily: 'courier',
-            color: '#333',
-            fontSize: '1.2rem'
-          }}>
-          {`mishyJari: {"Michelle Frattaroli": "Full Stack Developer"}`}
-        </h1>
+        <Col xl='auto' lg='auto' md='auto' sm={12} xs={12}>
+          <Row>
+          <h1 style={{
+              paddingTop: '10px',
+              fontFamily: 'courier',
+              color: '#333',
+              fontSize: '1.4rem'
+            }}>
+            {'Michelle Frattaroli || mishyJari.com'}
+          </h1>
+          </Row>
+          <Row className='justify-content-center'>
+          <Nav className='nav-main align-content-end'>
+            <ul className='nav' >
+              <li className='nav-item'>
+                <NavLink
+                  exact to='/'
+                  className='nav-link'
+                  selected={false}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink
+                  to='/portfolio'
+                  className='nav-link'
+                  selected={false}
+                >
+                  Portfolio
+                </NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink
+                  to='/contact'
+                  className='nav-link'
+                  selected={false}
+                >
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </Nav>
+          </Row>
+          </Col>
 
-        <Nav className='mr-auto'>
-        </Nav>
-        <Nav className='nav-main'>
-          <ul className='nav nav-tabs' >
-            <li className='nav-item'>
-              <NavLink
-                exact to='/'
-                className='nav-link'
-                selected={false}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className='nav-item'>
-              <NavLink
-                to='/portfolio'
-                className='nav-link'
-                selected={false}
-              >
-                Portfolio
-              </NavLink>
-            </li>
-            <li className='nav-item'>
-              <NavLink
-                to='/contact'
-                className='nav-link'
-                selected={false}
-              >
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </Nav>
 
       </Navbar>
-
         <Row id='content-main'>
           <Route exact path='/' component={About} />
           <Route path='/portfolio' component={Portfolio} />
