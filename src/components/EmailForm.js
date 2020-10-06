@@ -17,7 +17,7 @@ class EmailForm extends React.Component {
     this.setState({ [name]: value })
   }
 
-  handleSubmit = () => {
+  handleSubmit = e => {
     console.log(this.state)
     var service_id = "default_service";
     var template_id = "contact";
@@ -28,7 +28,10 @@ class EmailForm extends React.Component {
           contactEmail: '',
           heading: '',
           content: ''
-        }, () => alert('Email Sent!'))
+        }, () => {
+          alert('Email Sent!');
+          document.getElementById('newEmailForm').reset();
+        })
       })
       .catch(err => alert(JSON.stringify(err)))
   }
@@ -37,6 +40,7 @@ class EmailForm extends React.Component {
     return (
       <Form
         className='mailer'
+        id='newEmailForm'
         onChange={this.handleChange}
         style={{
           background: "#eee",
@@ -55,7 +59,7 @@ class EmailForm extends React.Component {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Email: </Form.Label>
+          <Form.Label>Response Email: </Form.Label>
           <Form.Control
             type='email'
             placeholder='Your Email Address'
@@ -64,7 +68,7 @@ class EmailForm extends React.Component {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Heading: </Form.Label>
+          <Form.Label>Subject: </Form.Label>
           <Form.Control
             type='text'
             placeholder='What is your message about?'
