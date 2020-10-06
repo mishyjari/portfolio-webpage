@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Row, Col, Card, Image, Container, Accordion, Button, useAccordionToggle, AccordionContext } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
 
 import resume from '../resources/resume.pdf';
@@ -90,7 +91,7 @@ const About = () => {
                     <Row fluid className='justify-content-center' style={{
                       padding: '10px',
                     }}>
-                    <em>You can use the <a href='./contact'>email form on my contact page</a> and I'll get right back to you!</em>
+                    <em>You can use the <Link to='./contact'>email form on my contact page</Link> and I'll get right back to you!</em>
                     </Row>
                     
                   </Container>

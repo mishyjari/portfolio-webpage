@@ -1,11 +1,7 @@
 import React from 'react';
 import EmailForm from './EmailForm.js';
 
-import { Container, Row, Col, Image, NavLink } from 'react-bootstrap'
-
-import linkedinImg from '../resources/linkedin.png';
-import githubImg from '../resources/github.png';
-import twitterImg from '../resources/twitter.png';
+import { Container, Row, Col } from 'react-bootstrap'
 
 const Contact = () => {
   return (

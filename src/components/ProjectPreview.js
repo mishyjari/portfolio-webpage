@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ProjectShow from './ProjectShow.js';
 
 const ProjectPreview = props => {
 

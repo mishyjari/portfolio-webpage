@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, CardDeck } from 'react-bootstrap';
+import { Row, Col, CardDeck } from 'react-bootstrap';
 import { Route } from 'react-router-dom';
 
 import ProjectPreview from './ProjectPreview.js';

@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import { Container, Card, Row, Nav, Col, Navbar, Image} from 'react-bootstrap';
-import Home from './components/Home.js';
 import Contact from './components/Contact.js';
 import Portfolio from './components/Portfolio.js';
 import About from './components/About.js';

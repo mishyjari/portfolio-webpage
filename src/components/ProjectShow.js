@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Container, Nav, Button } from 'react-bootstrap';
+import { Row, Col, Container, Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import renderHTML from 'react-render-html';
 
@@ -48,7 +48,7 @@ const ProjectShow = props => {
 
         <Row>
           <Col sm={5}>
-            <img src={project ? project.imgUrl : null} style={{maxWidth: '90%'}} />
+            <Image src={project ? project.imgUrl : null} style={{maxWidth: '90%'}} />
           </Col>
           <Col>
             <div
