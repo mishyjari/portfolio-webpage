@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Row, Col, Card, Image, Container, Accordion, Button, useAccordionToggle, AccordionContext } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { Document, Page, pdfjs } from 'react-pdf';
 
 import resume from '../resources/resume.pdf';
