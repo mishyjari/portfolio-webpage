@@ -2,13 +2,40 @@ import schmedditImg from '../resources/schmeddit.gif';
 import punchrImg from '../resources/punchr.png';
 import arrowJournalImg from '../resources/arrow_journal.png';
 import theBoardImg from '../resources/the_board.png';
+import shulFinderImg from '../resources/ShulFinder.png';
 
 const projects = [
   {
     projects: [
       {
+        id: 5,
+        title: 'Shul Finder',
+        shortDescription:
+          'ShulFinder utilizes Apple Mapkit to allow users to find Synagogues based on location.',
+        longDescription: `
+          <h4>Inspiration</h4>
+          <p>
+            Shul Finder started out as a simple desire to learn some Python. I decided to write a web scraper to pull data from <a href='http://www.mavensearch.com/synagogues/synagogues.asp'>Maven Search</a> into, first a JSON file and ultimately a MongoDB database. With this data, I found a use case in the times I'd be in another city or considering to move somewhere and wanting to know if there are any synagogues nearby, thus decided to create an application similar to Kosher GPS, but specific to synagogues and not limited to Orthodox spaces.
+          </p>
+          <h4>Technical Information</h4>
+          <p>
+            Shul Finder is a React app on a Node.js backend using data from a MongoDB database. It utilizes Apple MapKit with some custom functions to render each synagogue as a map annotation. Styling is handled with a combination of SASS and Bootstrap.
+          </p>
+          <p>
+            If the user has location services enabled, the map will load local to the user and show nearby synagogues on a list as well as the map. If the user does not have location services enabled, they will see a modal prompting them to enter a location to search by. When the map updates, the application will find all results with coordinates within the visible map, render those annotations, then render the list results based on those annotations. Mobile users need to use the drop down menu to view the list.
+          </p>
+          <p>
+            Clicking a map annotation or list result will load a modal with more information. Clicking an annotation cluster will zoom the map in closer to that cluster's region.
+          </p>
+        `,
+        imgUrl: shulFinderImg,
+        github: 'https://github.com/mishyjari/shul-finder',
+        liveDemo: 'https://shulfinder.com',
+      },
+      {
         title: 'The Board',
-        shortDescription: '“The Board” is an application for dispatchers at courier companies to manage couriers, clients and deliveries in real-time.',
+        shortDescription:
+          '“The Board” is an application for dispatchers at courier companies to manage couriers, clients and deliveries in real-time.',
         longDescription: `
           <h4>Inspiration</h4>
             <p>
@@ -37,12 +64,12 @@ const projects = [
         imgUrl: theBoardImg,
         github: 'https://www.github.com/mishyjari',
         videoDemo: 'https://www.youtube.com/watch?v=74Se022lc78',
-        liveDemo: 'http://theboard.mishyjari.com'
-
+        liveDemo: 'http://theboard.mishyjari.com',
       },
       {
         title: 'Punchr',
-        shortDescription: 'Punchr is a web application built as a simple replacement for a traditional employee punch clock, allowing employees to open and close their shift using a 4-digit PIN, and for managers to access, and if necessary modify, shift histories. ',
+        shortDescription:
+          'Punchr is a web application built as a simple replacement for a traditional employee punch clock, allowing employees to open and close their shift using a 4-digit PIN, and for managers to access, and if necessary modify, shift histories. ',
         longDescription: `
         <h4>Using the Application</h4>
         <p>
@@ -69,11 +96,12 @@ const projects = [
         imgUrl: punchrImg,
         github: 'https://github.com/mishyjari/punchr-client',
         videoDemo: null,
-        liveDemo: null
+        liveDemo: null,
       },
       {
         title: 'ArrowJournal',
-        shortDescription: 'Arrow journal is a personal organization system inspired by the Bullet Journal, allowing users to track events and tasks in a UI resembling that of an actual journal organizer.',
+        shortDescription:
+          'Arrow journal is a personal organization system inspired by the Bullet Journal, allowing users to track events and tasks in a UI resembling that of an actual journal organizer.',
         longDescription: `
           <p>
             Upon loading, ArrowJournal will allow a user to login or create a new account. Event and Task instances are relational to each user, so a user account must exist for the journal to be used.
@@ -107,11 +135,12 @@ const projects = [
         imgUrl: arrowJournalImg,
         github: 'https://www.github.com/mishyjari',
         videoDemo: 'https://youtu.be/Zrc0YOT8EKc',
-        liveDemo: null
+        liveDemo: null,
       },
       {
         title: 'Schmeddit',
-        shortDescription: 'A Reddit clone featuring categories, up/down votes on posts, and threaded replies.',
+        shortDescription:
+          'A Reddit clone featuring categories, up/down votes on posts, and threaded replies.',
         longDescription: `
         <p>
           Schmeddit is a Reddit clone which allows for posts to be created within a category. Posts can be upvoted, downvoted or favorited by users. This information is tracked in the sidebar, showing the most popular posts. Posts also support threaded replies. All posts are viewable publicly, but a user must first create an account and login in order to vote, post or comment.
@@ -126,10 +155,10 @@ const projects = [
         imgUrl: schmedditImg,
         github: 'https://github.com/mishyjari/schmeddit',
         videoDemo: null,
-        liveDemo: null
-      }
-    ]
-  }
-]
+        liveDemo: null,
+      },
+    ],
+  },
+];
 
-export default projects
+export default projects;
